@@ -1,0 +1,72 @@
+.contenedor-reproductor {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  .tiempo-cancion {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    input {
+      width: 100%;
+      padding: 1rem 0;
+      cursor: pointer;
+    }
+
+    p {
+      padding: 1rem;
+    }
+  }
+
+  .botonera-reproductor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+
+    svg {
+      cursor: pointer;
+      color: $color-negro;
+    }
+  }
+} 
+
+// MODO OSCURO 
+.reproductor-oscuro {
+  background-color: $color-fondo-oscuro;
+  color: white;
+  
+  .botonera-reproductor svg {
+    color: white;
+  }
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 1250px) {
+  .contenedor-reproductor {
+    .tiempo-cancion {width: 60%} 
+    .botonera-reproductor {width: 40%}
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .contenedor-reproductor {
+    .tiempo-cancion {width: 70%}
+    .botonera-reproductor {width: 50%}
+  }  
+}
+
+@media screen and (max-width: 720px) {
+  .contenedor-reproductor {
+    margin-top: 0;
+    .tiempo-cancion {
+      width: 90%;
+    }  
+    .botonera-reproductor {width: 60%}
+  }
+}

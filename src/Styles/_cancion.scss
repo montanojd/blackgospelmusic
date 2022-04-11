@@ -1,0 +1,81 @@
+.contenedor-cancion {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 20%;
+    border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    box-shadow: 3px 3px 10px 3px #b0c4de96;
+  }
+  
+  h2 {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+}
+
+// ANIMACION
+.imagen-pulso {
+  animation: pulso 10s infinite linear;
+    -webkit-animation: pulso 10s infinite linear;
+}
+
+  @keyframes pulso {
+    0% {
+      transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    } 
+    50% {
+      transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+  }
+
+// MODO OSCURO
+.cancion-oscura {
+  background-color: $color-fondo-oscuro;
+  h2, h3 {
+    color: white;
+  }
+  img {
+    box-shadow: 3px 3px 10px 3px #2f2f2f;
+  }
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 1250px) {
+  .contenedor-cancion { 
+    img {width: 25%}
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .contenedor-cancion {
+    img {width: 35%}
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .contenedor-cancion {
+    img {width: 50%}
+  }
+}

@@ -1,0 +1,152 @@
+.lista-canciones {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 2px 30px #cfc8c8;
+  overflow-y: scroll;
+  transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+  transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  opacity: 0;
+
+  h2 {
+    padding: 1.3rem 2rem;
+  }
+}
+
+.lista-activa {
+  transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+  opacity: 1;
+}
+
+.cancion-en-lista {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background .2s ease;
+    -webkit-transition: background .2s ease;
+    -moz-transition: background .2s ease;
+    -ms-transition: background .2s ease;
+    -o-transition: background .2s ease;
+  
+  &:hover {
+    background-color: #efe6fa;  
+  }
+  
+  img {
+    width: 30%;
+  }
+
+  .detalles-cancion {
+    padding-left: 1rem;
+    
+    h3 {
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    
+    h4{
+      font-size: .8rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.seleccionada {
+  background-color: $color-seleccionado-lista;
+  
+  &:hover {
+    background-color: $color-seleccionado-lista;
+  }
+}
+
+// MODO OSCURO
+.lista-oscura {
+  background-color: $color-fondo-oscuro;
+  box-shadow: 2px 2px 30px #1f1c1c;
+  
+  h2, h3, h4 {
+    color: white;
+  }
+  
+  .cancion-en-lista:hover {
+    background-color: $color-hover-lista-oscura;
+  }
+  
+  .seleccionada {
+    background-color: $color-seleccionado-lista-oscura;
+    
+    &:hover {
+      background-color: $color-seleccionado-lista-oscura;
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 1250px) {
+  .lista-canciones {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .lista-canciones {
+    width: 100%;
+
+    h2 {
+      position: sticky;
+      top: 0;
+      left: 0;
+      padding: 1.5rem 2rem;
+      width: 100%;
+      background-color: white;
+    }
+  }
+
+  .lista-oscura h2 {
+      background-color: $color-fondo-oscuro;
+    }
+  }
+  
+// BARRA DE SCROLL VERTICAL
+
+  // Ancho
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  // Color de fondo
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  // Color de barra
+  ::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+  }
+
+  // Color de barra en hover
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b4b4b4; 
+  }
+

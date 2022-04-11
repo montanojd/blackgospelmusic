@@ -1,0 +1,60 @@
+nav {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .botones {
+    display: flex;
+
+    .boton-oscuro {
+      margin-left: 10px;
+    }
+  }
+
+  button {
+    background: none;
+    border: solid 1.5px #585858;
+    border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    padding: 9px 15px;
+    cursor: pointer;
+    transition: all .3s ease;
+      -webkit-transition: all .3s ease;
+      -moz-transition: all .3s ease;
+      -ms-transition: all .3s ease;
+      -o-transition: all .3s ease;
+    
+    &:hover {
+      background-color: #585858;
+      color: white;
+    }
+
+    svg {
+      margin-left: 7px;
+    }
+  }
+}
+
+.boton-activado {
+  background-color: #585858;
+  color: white;
+}
+
+// MODO OSCURO
+.header-oscuro {
+  background-color: $color-fondo-oscuro;
+  h1, button {
+    color: white;
+  }
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 870px) {
+  nav button {
+    z-index: 1;
+  }
+}
